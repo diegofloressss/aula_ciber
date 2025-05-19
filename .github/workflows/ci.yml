@@ -37,10 +37,10 @@ jobs:
           npm install
           npm run build
 
-       empacotar:
-    name: Empacotar
+    empacotar:
+      name: Empacotar
     needs: [build_back, build_front]
-    runs-on: ubuntu-latest
+       runs-on: ubuntu-latest
     steps:
      - name: Criar Versão / Release e Tag
        uses: softprops/action-gh-release@v2
